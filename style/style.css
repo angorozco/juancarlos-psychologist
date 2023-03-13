@@ -164,6 +164,7 @@ a {
 
 .us-imgcontainer {
     display: none;
+    border-radius: 4px;
 }
 
 .us-infocontainer {
@@ -232,6 +233,7 @@ a {
 
     .us-img {
         height: 100%;
+        border-radius: 4px;
     }
     .us-infocontainer {
         position: absolute;
@@ -261,19 +263,19 @@ a {
     }
 }
 
-/* --------------------areas--------------------- */
-#areas {
+/* --------------------benefits--------------------- */
+#benefits {
     width: 100%;
     padding: 2rem;
     text-align: center;
 }
 
-#areas h2 {
+#benefits h2 {
     margin-bottom: 2rem;
     font-size: 2rem;
 }
 
-.areas-card {
+.benefits-card {
     width: 300px;
     padding: 2rem;
     background-color: #07a39d;
@@ -287,7 +289,7 @@ a {
     border-radius: 4px;
 }
 
-.areas-card i {
+.benefits-card i {
     display: block;
     text-align: center;
     font-size: 2rem;
@@ -296,33 +298,213 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-    #areas {
+    #benefits {
         padding: 4rem;
     }
-    #areas h2 {
+    #benefits h2 {
         width: 40%;
         margin: 2rem auto;
     }
 
-    #areas p {
+    #benefits p {
         width: 70%;
         margin: auto;
     }
-    .areas-cards {
+    .benefits-cards {
         display: flex;
         margin-top: 2rem;
     }
-    #areas .areas-card p {
+    #benefits .benefits-card p {
         width: 100%;
         margin: 0;
         text-align: justify;
         font-size: 0.9rem;
     }
-    #areas .areas-card h3 {
+    #benefits .benefits-card h3 {
         text-align: center;
         margin-bottom: 1rem;
     }
 }
+
+/* --------------------areas--------------------- */
+#areas {
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--colorFour);
+    text-align: justify;
+}
+
+#areas h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#areas p {
+    margin-bottom: 2.5rem;
+}
+
+.areas-cards {
+    margin-top: 2.5rem;
+}
+
+.areas-card {
+    background-color: var(--colorTwo);
+    width: 300px;
+    height: 80px;
+    margin: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.areas-cardiconcontainer {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: var(--colorThree);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+    line-height: 40px;
+}
+
+.areas-card p {
+    color: var(--colorFour);
+}
+
+@media screen and (min-width: 768px) {
+    #areas {
+        padding: 4rem;
+        display: flex;
+    }
+
+    .areas-info {
+        width: 40%;
+    }
+    .areas-cards {
+        width: 60%;
+        padding: 0 0 0 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 0;
+    }
+}
+/* --------------------why us--------------------- */
+
+#whyus {
+    width: 100%;
+    padding: 2rem;
+}
+
+.whyus-text {
+    background-color: var(--colorThree);
+    width: 300px;
+    padding: 1rem;
+    height: 400px;
+    text-align: justify;
+    border-radius: 4px;
+    margin: auto;
+}
+
+.whyus-text h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.whyus-listcontainer {
+    position: relative;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.whyus-listcontainer img {
+    border-radius: 4px;
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+.whyus-list {
+    background-color: var(--colorFour);
+    list-style: none;
+    padding: 2rem;
+    width: 300px;
+    margin: auto;
+}
+
+.whyus-list li {
+    margin-bottom: 1rem;
+}
+
+.whyus-list li .bi-check2-circle {
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.whyus-list li span {
+    margin-left: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    #whyus {
+        height: 100vh;
+        padding: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .whyus-listcontainer {
+        width: 70%;
+        height: 400px;
+    }
+
+    .whyus-listcontainer img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    .whyus-list {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 4rem;
+    }
+}
+
+/* --------------------quote--------------------- */
+#quote {
+    width: 100%;
+    height: 100vh;
+    background-color: #ebf3fe;
+    opacity: 1;
+    background-image: radial-gradient(
+        #134898 0.35000000000000003px,
+        #ffff 0.35000000000000003px
+    );
+    background-size: 7px 7px;
+    font-size: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+
+#quote span {
+    color: var(--accent);
+}
+
+@media screen and (min-width: 768px) {
+    #quote {
+        font-size: 5rem;
+    }
+}
+/* --------------------contact--------------------- */
 
 /* --------------------footer--------------------- */
 .footer-info {
