@@ -28,28 +28,28 @@
         <li><a href="">Contáctanos</a></li>
       </ul>
     </nav>
-    <div class="slider">
-      <div class="mySlides fade">
-        <img
-          src="https://images.pexels.com/photos/5699436/pexels-photo-5699436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
-        <div class="slider-text">
-          <h2>Lorem ipsum dolor sit amet.</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati odio labore debitis ipsum ab
-            repellendus cum, nemo est soluta libero.</p>
-        </div>
-      </div>
-
-      <div class="mySlides fade">
-        <img
-          src="https://images.pexels.com/photos/5699465/pexels-photo-5699465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
-        <div class="slider-text">
-          <h2>Lorem ipsum dolor sit amet.</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati odio labore debitis ipsum ab
-            repellendus cum, nemo est soluta libero.</p>
-        </div>
+  </header>
+  <section class="slider">
+    <div class="mySlides fade">
+      <img
+        src="https://images.pexels.com/photos/5699436/pexels-photo-5699436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+      <div class="slider-text">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati odio labore debitis ipsum ab
+          repellendus cum, nemo est soluta libero.</p>
       </div>
     </div>
-  </header>
+
+    <div class="mySlides fade">
+      <img
+        src="https://images.pexels.com/photos/5699465/pexels-photo-5699465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+      <div class="slider-text">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati odio labore debitis ipsum ab
+          repellendus cum, nemo est soluta libero.</p>
+      </div>
+    </div>
+  </section>
   <section id="us">
     <div class="us-imgcontainer">
       <img src="./assets/happy-sad.jpg" alt="happy and sad faces" class="us-img">
@@ -178,16 +178,29 @@
       <span>"</span>Cuando más te conoces a ti mismo más paciencia tienes para lo que ves en los demás<span>"</span>
     </blockquote>
   </section>
-  <section>
+  <section id="contact">
+    <div class="contact-info">
+      <h2>Tienes dudas o necesitas una consulta? Contáctanos</h2>
+      <p>Déjanos tu consulta y nos pondremos en contacto lo más pronto posible</p>
+    </div>
     <form action="">
-      <label for="name">Nombre</label>
-      <input type="text" name="name" id="name">
-      <label for="apellido">Apellido</label>
-      <input type="text" name="apellido" id="apellido">
-      <label for="email">email</label>
-      <input type="email" name="email" id="email">
-      <label for="mensaje">Mensaje</label>
-      <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+      <div>
+        <label for="name">Nombre y Apellido</label>
+        <input type="text" name="name" id="name" required>
+      </div>
+      <div>
+        <label for="phone">Teléfono</label>
+        <input type="text" name="phone" id="phone" required>
+      </div>
+      <div>
+        <label for="email">email</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+      <div>
+        <label for="mensaje">Mensaje</label>
+        <textarea name="mensaje" id="mensaje" required></textarea>
+      </div>
+      <button class="btn">Enviar</button>
     </form>
   </section>
   <footer>
