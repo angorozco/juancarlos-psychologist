@@ -5,7 +5,7 @@
     --colorTwo: #042a62;
     --colorThree: #07a39d;
     --colorFour: #ebf3fe;
-    --accent: #f06449;
+    --accent: #fabb28;
 }
 
 * {
@@ -24,6 +24,33 @@ a {
     background-color: var(--accent);
     color: white;
     padding: 0.8rem 1.6rem;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--accent);
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 var(--accent);
+}
+
+.btn:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 var(--accent);
+}
+
+.btn:active {
+    transform: scale(0.9);
 }
 
 /* --------------------header--------------------- */
@@ -219,7 +246,7 @@ a {
     border-top: 1px dashed var(--colorThree);
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
     #us {
         height: 100vh;
     }
@@ -233,6 +260,8 @@ a {
 
     .us-img {
         height: 100%;
+        width: 250px;
+        object-fit: cover;
         border-radius: 4px;
     }
     .us-infocontainer {
@@ -240,8 +269,39 @@ a {
         right: 0;
         width: 80%;
         height: 100%;
-        padding: 6rem 12rem 4rem 4rem;
+        padding: 2rem;
     }
+    .us-infocontainer h2,
+    .us-infocontainer p {
+        margin-left: 6rem;
+    }
+    .us-infoitems {
+        margin-left: 6rem;
+    }
+    .us-infoitems p {
+        margin-left: 0;
+        font-size: 0.7rem;
+    }
+    .us-infoitem {
+        margin: 0;
+    }
+    .us-hr {
+        margin-left: 15rem;
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .us-img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .us-infocontainer {
+        padding: 4rem;
+        padding-right: 2rem;
+    }
+
     .us-infocontainer h2,
     .us-infocontainer p {
         margin-left: 15rem;
@@ -253,20 +313,20 @@ a {
     }
     .us-infoitems p {
         margin-left: 0;
+        font-size: 0.8rem;
     }
-    .us-infoitem {
-        margin: 0;
-    }
-    .us-hr {
-        margin-left: 15rem;
-        width: 250px;
+
+    @media screen and (min-width: 1200px) {
+        .us-infocontainer {
+            padding: 6rem 8rem;
+        }
     }
 }
 
 /* --------------------benefits--------------------- */
 #benefits {
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -351,7 +411,7 @@ a {
     background-color: var(--colorTwo);
     width: 300px;
     height: 80px;
-    margin: 1rem;
+    margin: 1rem 0;
     border-radius: 4px;
     text-align: center;
     line-height: 80px;
@@ -376,6 +436,14 @@ a {
     color: var(--colorFour);
 }
 
+@media screen and (min-width: 600px) {
+    .areas-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
 @media screen and (min-width: 768px) {
     #areas {
         padding: 4rem;
@@ -388,9 +456,8 @@ a {
     .areas-cards {
         width: 60%;
         padding: 0 0 0 2rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+
+        justify-content: space-evenly;
         margin-top: 0;
     }
 }
@@ -398,7 +465,7 @@ a {
 
 #whyus {
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .whyus-text {
@@ -519,7 +586,7 @@ a {
 }
 
 form {
-    width: 350px;
+    width: 100%;
     margin-top: 2rem;
     font-size: 0.8rem;
 }
@@ -550,12 +617,11 @@ form textarea {
 }
 
 form .btn {
-    border: none;
     cursor: pointer;
     width: 200px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
     #contact {
         padding: 4rem;
         display: flex;
@@ -563,7 +629,7 @@ form .btn {
     }
 
     .contact-info {
-        width: 40%;
+        width: 50%;
         text-align: right;
         padding-left: 8rem;
     }
@@ -571,7 +637,7 @@ form .btn {
     form {
         width: 60%;
         padding-right: 8rem;
-        padding-left: 1rem;
+        padding-left: 3rem;
         margin-top: 1rem;
     }
 }
